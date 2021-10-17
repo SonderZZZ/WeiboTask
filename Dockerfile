@@ -1,3 +1,9 @@
+on:
+  push:
+    branches: 
+      - master
+  schedule:
+    - cron: '0 17 * * *'
 FROM golang:1.15.6-alpine3.12 as builder
 WORKDIR /go
 COPY ./src ./src
